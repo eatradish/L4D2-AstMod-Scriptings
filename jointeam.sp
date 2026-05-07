@@ -350,7 +350,7 @@ public Action MoveToSpecTimer(Handle timer, int client) {
 	return Plugin_Continue;
 }
 
-public void L4D2_OnEndVersusModeRound_Post(bool countSurvivors)
+public void L4D2_OnEndVersusModeRound_Post()
 {
 	if (!GetConVarBool(hAllowBotSurvivors)) {
 		SetConVarInt(FindConVar("director_no_survivor_bots"), 0);
