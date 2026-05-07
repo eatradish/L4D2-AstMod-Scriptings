@@ -11,7 +11,6 @@
 为了确保插件能够正常运行并避免潜在的兼容性问题，**必须**使用以下特定版本的编译器进行编译：
 
 * **SourceMod 编译器版本**: `1.12.0.7230`
-* **语言**: SourcePawn 1.10+
 
 ### 编译步骤
 1.  下载并解压 [SourceMod 1.12.0.7230](https://www.sourcemod.net/downloads.php?branch=1.12) 。
