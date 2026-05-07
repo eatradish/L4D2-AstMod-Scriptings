@@ -84,14 +84,14 @@ GetCurrentWeaponSlot(client)
 	}
 	return slot;
 }
-Drop(client, bool:dropcurrent, count, bool:throw, receiver=0)
+Drop(client, bool:dropcurrent, count, bool:throw_bool, receiver=0)
 {
 	if(dropcurrent)
 	{
 		new s=GetCurrentWeaponSlot(client);
 		if(s>=0)
 		{
-			DropSlot(client, s, throw, receiver); 
+			DropSlot(client, s, throw_bool, receiver); 
 		}
 		
 	}
@@ -111,16 +111,16 @@ Drop(client, bool:dropcurrent, count, bool:throw, receiver=0)
 		for(new i=0; i<count && m>0; i++)
 		{
 			new r=GetRandomInt(0, m-1);
-			DropSlot(client, slot[r], throw,receiver);
+			DropSlot(client, slot[r], throw_bool,receiver);
 			slot[r]=slot[m-1];
 			m--;
 		}
 	}
 }
 
-DropSlot(client, slot, bool:throw=false, receiver=0)
+DropSlot(client, slot, bool:throw_bool=false, receiver=0)
 {
-	DropSlot_l4d2(client, slot, throw, receiver);
+	DropSlot_l4d2(client, slot, throw_bool, receiver);
 }
  
 
@@ -139,7 +139,7 @@ DropSlot(client, slot, bool:throw=false, receiver=0)
 
 
 // code from kwski43 [L4D2] Caught Item Drop http://forums.alliedmods.net/showthread.php?t=133610
-DropSlot_l4d2(client, slot, bool:throw=false, receiver=0)
+DropSlot_l4d2(client, slot, bool:throw_bool=false, receiver=0)
 {
 	new oldweapon=GetPlayerWeaponSlot(client, slot);
 	if (oldweapon > 0)
@@ -289,7 +289,7 @@ DropSlot_l4d2(client, slot, bool:throw=false, receiver=0)
 		GetClientEyeAngles(client, ang);
 		GetAngleVectors(ang, ang, NULL_VECTOR,NULL_VECTOR);
 		NormalizeVector(ang,ang);
-		if(throw)ScaleVector(ang, 500.0);
+		if(throw_bool)ScaleVector(ang, 500.0);
 		else ScaleVector(ang, 300.0);
 		
 		DispatchSpawn(index);

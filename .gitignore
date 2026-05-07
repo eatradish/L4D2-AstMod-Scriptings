@@ -3,3 +3,6 @@ sourcemod.code-workspace
 .vscode/
 .directory
 compiled/
+compile.sh
+spcomp
+spcomp64
