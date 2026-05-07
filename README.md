@@ -14,7 +14,7 @@
 * **语言**: SourcePawn 1.10+
 
 ### 编译步骤
-1.  下载并解压 [SourceMod 1.11.0.6970](https://www.sourcemod.net/downloads.php?branch=1.12) 。
+1.  下载并解压 [SourceMod 1.12.0.7230](https://www.sourcemod.net/downloads.php?branch=1.12) 。
 2.  将本项目中的所有文件放入 SourceMod 的 `addons/sourcemod/scripting` 目录下。
 3.  在 `addons/sourcemod/scripting` 目录下运行 `./compile.sh` 编译。
 4.  成品！
